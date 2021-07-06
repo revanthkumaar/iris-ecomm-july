@@ -11,3 +11,5 @@ const MenuItem = ({title}) => {
     </div>
   );
 };
+
+export default MenuItem;
