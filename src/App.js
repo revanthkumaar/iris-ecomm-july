@@ -7,7 +7,7 @@ import CartPage from "./pages/cart-page-component/cart-page-component";
 function App() {
   return (
     <div className="App">
-      <HomePage name="revanth"/>
+      
       <Route exact path="/" component={HomePage} />
       <Route exact path="/signin" component={SignInPage} />
       <Route path="/signin/cart" component={CartPage} />

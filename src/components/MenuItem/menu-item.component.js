@@ -1,12 +1,18 @@
 import React from "react";
 
-const MenuItem = ({title}) => {
+const MenuItem = ({ title, imageUrl, size}) => {
   return (
-    <div className="menu-item">
+    <div className={`${size} menu-item`}>
       {" "}
-      <div className="background-image"> </div>
+      <div className="background-image"
+            style={
+              {
+                backgroundImage:`url(${imageUrl})`
+              }
+            }
+      > </div>
       <div className="content">
-        <h1 className="title">title</h1>{" "}
+        <h1 className="title">{title}</h1>{" "}
       </div>{" "}
     </div>
   );
