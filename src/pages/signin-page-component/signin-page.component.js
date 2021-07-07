@@ -1,6 +1,9 @@
 import React from "react";
+import {withRouter} from "react-router-dom"
 
-const SignInPage = () => {
+const SignInPage = ({match}) => {
+  console.log("checking the match value in signin comp" );
+  console.log(match)
   //functional component of React
   return (
     <div className="SignInPage">
@@ -9,4 +12,4 @@ const SignInPage = () => {
   );
 };
 
-export default SignInPage;
+export default withRouter(SignInPage);

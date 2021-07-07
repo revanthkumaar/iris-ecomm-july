@@ -3,13 +3,12 @@ import "./menu-item.component.scss";
 //import HOC from router functionality
 import { withRouter } from "react-router-dom";
 
-const MenuItem = ({ title, imageUrl, size, history, match, location }) => {
-  console.log(history);
-  console.log(match);
-  console.log(location);
-
+const MenuItem = ({ title, imageUrl, size, linkUrl, history, match, location }) => {
+  console.log(match)
   return (
-    <div className={`${size} menu-item`}>
+    <div className={`${size} menu-item`}
+      onClick = {() => history.push(`${match.url}${linkUrl}`)}
+    >
       {" "}
       <div
         className="background-image"

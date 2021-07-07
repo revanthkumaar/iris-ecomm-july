@@ -11,6 +11,7 @@ function App() {
       <Route exact path="/" component={HomePage} />
       <Route exact path="/signin" component={SignInPage} />
       <Route path="/signin/cart" component={CartPage} />
+      <Route path ="/hats" component= {SignInPage}/>
     </div>
   );
 }
