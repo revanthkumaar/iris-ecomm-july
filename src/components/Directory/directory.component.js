@@ -1,5 +1,8 @@
-import React from "react";
-import MenuItem from "../MenuItem/menu-item.component";
+import React from 'react';
+
+import MenuItem from '../MenuItem/menu-item.component';
+
+import './directory.styles.scss';
 
 class Directory extends React.Component {
   constructor() {
@@ -8,53 +11,47 @@ class Directory extends React.Component {
     this.state = {
       sections: [
         {
-          title: "veggies",
-          imageUrl: "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/12_powerhouse_vegetables_slideshow/intro_cream_of_crop.jpg",
+          title: 'hats',
+          imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
           id: 1,
-          size: "small",
-          linkUrl: "veggies",
+          linkUrl: 'hats'
         },
         {
-          title: "fruits",
-          imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-          size: "small",
-
+          title: 'jackets',
+          imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
           id: 2,
-          linkUrl: "fruits",
+          linkUrl: ''
         },
         {
-          title: "dairy",
-          imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-          size: "small",
-
+          title: 'sneakers',
+          imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
           id: 3,
-          linkUrl: "dairy",
+          linkUrl: ''
         },
         {
-          title: "household",
-          imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-          size: "large",
+          title: 'womens',
+          imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+          size: 'large',
           id: 4,
-          linkUrl: "household",
+          linkUrl: ''
         },
         {
-          title: "dont know",
-          imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-          size: "large",
+          title: 'mens',
+          imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+          size: 'large',
           id: 5,
-          linkUrl: "dont know",
-        },
-      ],
+          linkUrl: ''
+        }
+      ]
     };
   }
 
   render() {
     return (
-      <div className="directory-menu">
-        {this.state.sections.map(({ id, ...otherProps }) => (
-          <MenuItem key={id} {...otherProps} />
+      <div className='directory-menu'>
+        {this.state.sections.map(({ id, ...otherSectionProps }) => (
+          <MenuItem key={id} {...otherSectionProps} />
         ))}
-        ;
       </div>
     );
   }

@@ -1,16 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import Directory from '../../components/Directory/directory.component'
+import Directory from "../../components/Directory/directory.component";
 
-const HomePage = (props) => {
+import "./homepage.styles.scss";
 
-    //functional component of React
-    return(
-        <div className="HomePage">
-          <Directory/>
-        </div>
-    )
-
-}
+const HomePage = () => (
+  <div className="homepage">
+    <Directory />
+  </div>
+);
 
 export default HomePage;
