@@ -1,17 +1,24 @@
 import React from "react";
-import './menu-item.component.scss'
+import "./menu-item.component.scss";
+//import HOC from router functionality
+import { withRouter } from "react-router-dom";
 
-const MenuItem = ({ title, imageUrl, size}) => {
+const MenuItem = ({ title, imageUrl, size, history, match, location }) => {
+  console.log(history);
+  console.log(match);
+  console.log(location);
+
   return (
     <div className={`${size} menu-item`}>
       {" "}
-      <div className="background-image"
-            style={
-              {
-                backgroundImage:`url(${imageUrl})`
-              }
-            }
-      > </div>
+      <div
+        className="background-image"
+        style={{
+          backgroundImage: `url(${imageUrl})`,
+        }}
+      >
+        {" "}
+      </div>
       <div className="content">
         <h1 className="title">{title}</h1>{" "}
       </div>{" "}
@@ -19,4 +26,4 @@ const MenuItem = ({ title, imageUrl, size}) => {
   );
 };
 
-export default MenuItem;
+export default withRouter(MenuItem); //wrapping a comp inside a HOC
