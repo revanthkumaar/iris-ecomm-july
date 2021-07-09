@@ -26,6 +26,6 @@ const CartDropdown = ({ cartItems, history, dispatch }) => {
   </div>;
 };
 
-const mapStateToProps = // later
+//const mapStateToProps = // later
 
-export default withRouter(connect(mapStateToProps)(CartDropdown))
+export default withRouter(connect(CartDropdown))
