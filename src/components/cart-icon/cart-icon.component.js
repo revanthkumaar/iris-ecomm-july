@@ -8,10 +8,13 @@ import "./cart-icon.styles.scss";
 
 
 const CartIcon = ({itemCount}) => {
-    <div className='cart-icon' onClick= {toggleCartHidden}>
-        <ShoppingIcon className='shopping-icon'/>
-        <span className='item-count'>{itemCount}</span>
-    </div>
+    return (
+      <div className="cart-icon" onClick={toggleCartHidden}>
+        <ShoppingIcon className="shopping-icon" />
+        <span className="item-count">{itemCount}</span>
+      </div>
+    );
+   
 }
 
 const mapStateToProps = () => {
