@@ -1,21 +1,26 @@
-import { render } from '@testing-library/react';
-import React from 'react';
-import connect from 'react-redux'
+import { render } from "@testing-library/react";
+import React from "react";
+import {connect} from "react-redux";
+import {getProductsFromAPI} from '../../redux/productswithApi-Sagas/products-api.actions'
 
-
-const ProductsWithApi = ({getProducts}) => {
-
+class ProductsWithApi extends React.Component {
+  render() {
     return (
-        <button onClick={() => getProducts()}>Get Products from an API</button>
-       
-    )
+      <div>
+        <button onClick={() => this.props.dispatch(getProductsFromAPI())}>
+          Get Products from an API
+        </button>
 
+        {this.props.loading ? (
+          <p>Loading...</p>
+        ) : this.props.error ? (
+          <p> Error</p>
+        ) : (
+          <p>this.props.products</p>
+        )}
+      </div>
+    );
+  }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-
-    getProducts : dispatch(getProductsFromAPI()) //action creator
- 
-});
-
-export default connect(null,mapDispatchToProps)(ProductsWithApi);
+export default connect(null,null)(ProductsWithApi);

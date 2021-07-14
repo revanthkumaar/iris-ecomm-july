@@ -6,7 +6,7 @@ import CartPage from "./pages/cart-page-component/cart-page-component";
 import Header from "./components/header/header.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
 import ShopPage from "./pages/shop/shop.component";
-
+import ProductsWithApi from "./pages/products-with-api/products-api.component";
 function App() {
   return (
     <div className="App">
@@ -16,7 +16,9 @@ function App() {
       <Route path="/signin/cart" component={CartPage} />
       <Route path="/hats" component={SignInPage} />
       <Route exact path="/checkout" component={CheckoutPage} />
-      <Route exact path="/shop" component={ShopPage}/>
+      <Route exact path="/shop" component={ShopPage} />
+
+      <Route exact path="/productsAPI" component={ProductsWithApi} />
     </div>
   );
 }
