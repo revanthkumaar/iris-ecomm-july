@@ -4,16 +4,17 @@ import SignInPage from "./pages/signin-page-component/signin-page.component";
 import { Route } from "react-router-dom";
 import CartPage from "./pages/cart-page-component/cart-page-component";
 import Header from "./components/header/header.component";
-
+import CheckoutPage from "./pages/checkout/checkout.component";
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <Route exact path="/" component={HomePage} />
       <Route exact path="/signin" component={SignInPage} />
       <Route path="/signin/cart" component={CartPage} />
-      <Route path ="/hats" component= {SignInPage}/>
+      <Route path="/hats" component={SignInPage} />
+      <Route exact path="/checkout" component={CheckoutPage} />
     </div>
   );
 }
