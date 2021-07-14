@@ -1,5 +1,5 @@
 import ProductApiActionTypes from "./products-api.types";
 
 export const getProductsFromAPI = () => ({
-  type: ProductApiActionTypes.GET_PRODUCT_INFORMATION
+  type: ProductApiActionTypes.START_TO_GET_PRODUCTS_INFORMATION,
 });
