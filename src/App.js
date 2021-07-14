@@ -16,7 +16,7 @@ function App() {
       <Route path="/signin/cart" component={CartPage} />
       <Route path="/hats" component={SignInPage} />
       <Route exact path="/checkout" component={CheckoutPage} />
-      <Route exact path="shop" component={ShopPage}/>
+      <Route exact path="/shop" component={ShopPage}/>
     </div>
   );
 }
