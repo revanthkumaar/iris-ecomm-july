@@ -16,7 +16,7 @@ const productApiReducer = (state = INITIAL_STATE, action) => {
       };
     case ProductApiActionTypes.GET_PROD_INFO_SUCCEED:
       return {
-        products: [],
+        products: action.payload.products,
         loading: false,
         error: false,
       };
