@@ -1,6 +1,6 @@
 import userConstants from "./user.constants";
 
-function login(username, password) {
+export function login(username, password) {
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -16,7 +16,7 @@ function login(username, password) {
     });
 }
 
-function logout() {
+export function logout() {
   // remove user from local storage to log user out
   localStorage.removeItem("user");
 }

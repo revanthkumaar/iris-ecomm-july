@@ -1,4 +1,4 @@
-import userConstants from './user.constants'
+import {userConstants} from './user.constants'
 import * as userService from './user.service'
 
 
@@ -27,4 +27,9 @@ export function login(username, password, from) {
   function failure(error) {
     return { type: userConstants.LOGIN_FAILURE, error };
   }
+}
+
+export function logout() {
+  userService.logout();
+  return { type: userConstants.LOGOUT };
 }

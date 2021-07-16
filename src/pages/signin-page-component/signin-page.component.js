@@ -1,7 +1,7 @@
-import React, { useState, useLocation, useEffect } from "react";
-import {  Link} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import {  Link, useLocation} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import * as userActions from '../redux/user.actions';
+import * as userActions from '../../redux/user.actions';
 
 function SignInPage(){
    const [inputs, setInputs] = useState({
@@ -10,7 +10,7 @@ function SignInPage(){
    });
    const [submitted, setSubmitted] = useState(false);
    const { username, password } = inputs;
-   const loggingIn = useSelector((state) => state.authentication.loggingIn);
+  //const loggingIn = useSelector((state) => state.authentication.loggingIn);
    const dispatch = useDispatch();
    const location = useLocation();
 
@@ -72,9 +72,8 @@ return (
       </div>
       <div className="form-group">
         <button className="btn btn-primary">
-          {loggingIn && (
-            <span className="spinner-border spinner-border-sm mr-1"></span>
-          )}
+          
+          
           Login
         </button>
         <Link to="/register" className="btn btn-link">
