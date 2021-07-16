@@ -1,15 +1,25 @@
-import React from "react";
-import {withRouter} from "react-router-dom"
+import React, { useEffect } from "react";
+import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
-const SignInPage = ({match}) => {
-  console.log("checking the match value in signin comp" );
-  console.log(match)
-  //functional component of React
+
+function SignInPage() {
+  const dispatch =  useDispatch();
+
+
   return (
-    <div className="SignInPage">
-      <p> This is the signin page component </p>
+    <div className="jumbotron">
+      <div className="container">
+        <div className="col-md-8 offset-md-2">
+          {alert.message && (
+            <div className={`alert ${alert.type}`}>{alert.message}</div>
+          )}
+        
+        </div>
+      </div>
     </div>
   );
-};
 
-export default withRouter(SignInPage);
+}
+
+export default  SignInPage;
