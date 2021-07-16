@@ -7,7 +7,7 @@ export function login(username, password) {
     body: JSON.stringify({ username, password }),
   };
 
-  return fetch(`http://localhost:5000/users/authenticate`, requestOptions)
+  return fetch(`https://jsonplaceholder.typicode.com/todos/1`)
     .then(handleResponse)
     .then((user) => {
       localStorage.setItem("user", JSON.stringify(user));

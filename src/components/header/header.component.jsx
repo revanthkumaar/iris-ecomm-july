@@ -25,6 +25,8 @@ const Header = ({ hidden }) => (
       <Link className='option' to='/shop'>
         CONTACT
       </Link>
+        <Link className='option' to='/signin'>
+SIGNIN      </Link>
      
       <CartIcon />
     </div>
